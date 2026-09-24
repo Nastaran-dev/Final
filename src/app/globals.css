@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x:hidden
+  }
+
+  body {
+    @apply bg-primary-dark text-neutral-text font-heading overflow-x-hidden;
+  }
+
+  ::selection {
+    @apply bg-accent-cyan/30 text-neutral-text;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-container px-6 sm:px-10 lg:px-[117px];
+  }
+}
